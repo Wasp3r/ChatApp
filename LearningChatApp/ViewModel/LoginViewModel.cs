@@ -28,7 +28,7 @@ namespace LearningChatApp
         public LoginViewModel()
         {
             LoginCommand = new RelayParameterizedCommand(async (parameter) => await Login(parameter));
-            Email = "Test";
+            Email = "Testowy test";
         }
 
         #endregion
