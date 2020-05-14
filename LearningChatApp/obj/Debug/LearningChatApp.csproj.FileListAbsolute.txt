@@ -22,3 +22,8 @@ D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\LearningChatApp.cs
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\LearningChatApp.csproj.CoreCompileInputs.cache
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\LearningChatApp.exe
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\LearningChatApp.pdb
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\LearningChatApp.csprojAssemblyReference.cache
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\SideMenuControl.g.cs
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Pages\ChatPage.g.cs
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\SideMenuControl.baml
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Pages\ChatPage.baml

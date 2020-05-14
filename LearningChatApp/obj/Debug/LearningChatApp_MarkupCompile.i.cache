@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\App.xaml
-8-1556808054
+10-1095738638
 
-27389989572
+29-1698871069
 13-1505183044
-MainWindow.xaml;Pages\LoginPage.xaml;Styles\Scroll.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;
+Controls\SideMenuControl.xaml;MainWindow.xaml;Pages\ChatPage.xaml;Pages\LoginPage.xaml;Styles\Scroll.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;
 
 True
 

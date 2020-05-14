@@ -55,7 +55,7 @@ namespace LearningChatApp
 
         public GridLength TitleHeightGridLength => new GridLength(TitleHeight + ResizeBorder);
 
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Chat;
 
         #endregion
 

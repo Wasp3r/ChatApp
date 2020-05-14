@@ -94,11 +94,21 @@
 
     <Border Background="{StaticResource WordBlueBrush}">
         <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
             <Grid.Background>
                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/Images/Background/emoji-background.png"/>
             </Grid.Background>
 
             <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" Background="Transparent"/>
+
+            <local:SideMenuControl>
+                
+            </local:SideMenuControl>
         </Grid>
     </Border>
     
