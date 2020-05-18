@@ -1,6 +1,7 @@
 ﻿using System.Windows.Controls;
 using System.Windows;
 using System.Threading.Tasks;
+using LearningChatApp.Core;
 
 namespace LearningChatApp
 {
@@ -27,7 +28,7 @@ namespace LearningChatApp
             get { return mViewModel; }
             set
             {
-                if (mViewModel == null)
+                if (mViewModel == value)
                     return;
 
                 mViewModel = value;

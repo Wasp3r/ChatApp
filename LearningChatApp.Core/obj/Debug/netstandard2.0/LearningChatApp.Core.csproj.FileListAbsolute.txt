@@ -1,0 +1,10 @@
+D:\Programowanie\C#\LearningChatApp\LearningChatApp.Core\obj\Debug\netstandard2.0\LearningChatApp.Core.AssemblyInfoInputs.cache
+D:\Programowanie\C#\LearningChatApp\LearningChatApp.Core\obj\Debug\netstandard2.0\LearningChatApp.Core.AssemblyInfo.cs
+D:\Programowanie\C#\LearningChatApp\LearningChatApp.Core\obj\Debug\netstandard2.0\LearningChatApp.Core.dll
+D:\Programowanie\C#\LearningChatApp\LearningChatApp.Core\obj\Debug\netstandard2.0\LearningChatApp.Core.pdb
+D:\Programowanie\C#\LearningChatApp\LearningChatApp.Core\obj\Debug\netstandard2.0\LearningChatApp.Core.csprojAssemblyReference.cache
+D:\Programowanie\C#\LearningChatApp\LearningChatApp.Core\bin\Debug\netstandard2.0\LearningChatApp.Core.deps.json
+D:\Programowanie\C#\LearningChatApp\LearningChatApp.Core\bin\Debug\netstandard2.0\LearningChatApp.Core.dll
+D:\Programowanie\C#\LearningChatApp\LearningChatApp.Core\bin\Debug\netstandard2.0\LearningChatApp.Core.pdb
+D:\Programowanie\C#\LearningChatApp\LearningChatApp.Core\obj\Debug\netstandard2.0\LearningChatApp.Core.csproj.CoreCompileInputs.cache
+D:\Programowanie\C#\LearningChatApp\LearningChatApp.Core\obj\Debug\netstandard2.0\LearningChatApp.Core.csproj.Fody.CopyLocal.cache

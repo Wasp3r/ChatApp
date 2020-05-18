@@ -1,6 +1,11 @@
-﻿
+﻿D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
 FD:\Programowanie\C#\LearningChatApp\LearningChatApp\App.xaml;;
+FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Controls\Chat\ChatListControl.xaml;;
+FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Controls\Chat\ChatListItemControl.xaml;;
+FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Controls\SideMenuControl.xaml;;
 FD:\Programowanie\C#\LearningChatApp\LearningChatApp\MainWindow.xaml;;
+FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Pages\ChatPage.xaml;;
+FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Pages\RegisterPage.xaml;;
 FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Pages\LoginPage.xaml;;
 FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Styles\Scroll.xaml;;
 FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Styles\Windows.xaml;;
@@ -8,6 +13,4 @@ FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Styles\Texts.xaml;;
 FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Styles\Fonts.xaml;;
 FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Styles\Buttons.xaml;;
 FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Styles\Colors.xaml;;
-FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Controls\SideMenuControl.xaml;;
-FD:\Programowanie\C#\LearningChatApp\LearningChatApp\Pages\ChatPage.xaml;;
 

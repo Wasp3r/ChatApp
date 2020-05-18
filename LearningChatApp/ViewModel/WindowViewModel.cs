@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningChatApp.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,8 +55,6 @@ namespace LearningChatApp
         public int TitleHeight { get; set; } = 42;
 
         public GridLength TitleHeightGridLength => new GridLength(TitleHeight + ResizeBorder);
-
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Chat;
 
         #endregion
 

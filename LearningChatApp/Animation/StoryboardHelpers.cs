@@ -6,12 +6,12 @@ namespace LearningChatApp
 {
     public static class StoryboardHelpers
     {
-        public static void AddSlideFromRight(this Storyboard storyboard, float secounds, double offset, float declarationRatio = 0.9f)
+        public static void AddSlideFromRight(this Storyboard storyboard, float secounds, double offset, float declarationRatio = 0.9f, bool keepMargin = true)
         {
             var animation = new ThicknessAnimation
             {
                 Duration = new Duration(TimeSpan.FromSeconds(secounds)),
-                From = new Thickness(offset, 0, -offset, 0),
+                From = new Thickness(keepMargin ? offset : 0, 0, -offset, 0),
                 To = new Thickness(0),
                 DecelerationRatio = declarationRatio
             };
@@ -21,13 +21,43 @@ namespace LearningChatApp
             storyboard.Children.Add(animation);
         }
 
-        public static void AddSlideToLeft(this Storyboard storyboard, float secounds, double offset, float declarationRatio = 0.9f)
+        public static void AddSlideFromLeft(this Storyboard storyboard, float secounds, double offset, float declarationRatio = 0.9f, bool keepMargin = true)
+        {
+            var animation = new ThicknessAnimation
+            {
+                Duration = new Duration(TimeSpan.FromSeconds(secounds)),
+                From = new Thickness(-offset, 0, keepMargin ? offset : 0, 0),
+                To = new Thickness(0),
+                DecelerationRatio = declarationRatio
+            };
+
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Margin"));
+
+            storyboard.Children.Add(animation);
+        }
+
+        public static void AddSlideToLeft(this Storyboard storyboard, float secounds, double offset, float declarationRatio = 0.9f, bool keepMargin = true)
         {
             var animation = new ThicknessAnimation
             {
                 Duration = new Duration(TimeSpan.FromSeconds(secounds)),
                 From = new Thickness(0),
-                To = new Thickness(-offset, 0, offset, 0),
+                To = new Thickness(-offset, 0, keepMargin ? offset : 0, 0),
+                DecelerationRatio = declarationRatio
+            };
+
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Margin"));
+
+            storyboard.Children.Add(animation);
+        }
+
+        public static void AddSlideToRight(this Storyboard storyboard, float secounds, double offset, float declarationRatio = 0.9f, bool keepMargin = true)
+        {
+            var animation = new ThicknessAnimation
+            {
+                Duration = new Duration(TimeSpan.FromSeconds(secounds)),
+                From = new Thickness(0),
+                To = new Thickness(keepMargin ? offset : 0, 0, -offset, 0),
                 DecelerationRatio = declarationRatio
             };
 
