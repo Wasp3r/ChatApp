@@ -5,7 +5,74 @@ using LearningChatApp.Core;
 
 namespace LearningChatApp
 {
-    public class BasePage<VM> : Page
+
+    public class BasePage : Page
+    {
+        #region Public properties
+        public PageAnimation PageLoadAdnimation { get; set; } = PageAnimation.SlideAndFadeInFromRgiht;
+
+        public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideAndFadeOutToLeft;
+
+        public float SlideSecounds { get; set; } = 0.8f; 
+
+        public bool ShouldAnimateOut { get; set; }
+        #endregion
+
+        #region Animation Load / Unload
+
+        private async void BasePage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (ShouldAnimateOut)
+                await AnimateOutAsync();
+            else
+                await AnimateInAsync();
+        }
+
+        public async Task AnimateInAsync()
+        {
+            if (PageLoadAdnimation == PageAnimation.None)
+                return;
+
+            switch (PageLoadAdnimation)
+            {
+                case PageAnimation.SlideAndFadeInFromRgiht:
+
+                    await this.SlideAndFadeInFromRight(SlideSecounds);
+
+                    break;
+            }
+
+        }
+
+        public async Task AnimateOutAsync()
+        {
+            if (PageUnloadAnimation == PageAnimation.None)
+                return;
+
+            switch (PageUnloadAnimation)
+            {
+
+                case PageAnimation.SlideAndFadeOutToLeft:
+
+                    await this.SlideAndFadeOutToLeft(SlideSecounds);
+
+                    break;
+            }
+
+        }
+
+        #endregion
+
+        public BasePage()
+        {
+            if (PageLoadAdnimation != PageAnimation.None)
+                Visibility = Visibility.Collapsed;
+
+            this.Loaded += BasePage_Loaded;
+        }
+    }
+
+    public class BasePage<VM> : BasePage
         where VM : BaseViewModel, new()
     {
 
@@ -16,12 +83,6 @@ namespace LearningChatApp
         #endregion
 
         #region Public Properties
-
-        public PageAnimation PageLoadAdnimation { get; set; } = PageAnimation.SlideAndFadeInFromRgiht;
-
-        public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideAndFadeOutToLeft;
-
-        public float SlideSecounds { get; set; } = 0.8f;
 
         public VM ViewModel
         {
@@ -41,55 +102,9 @@ namespace LearningChatApp
 
         #region Constructor
 
-        public BasePage()
+        public BasePage() : base()
         {
-            if (PageLoadAdnimation != PageAnimation.None)
-                Visibility = Visibility.Collapsed;
-
-            this.Loaded += BasePage_Loaded;
             ViewModel = new VM();
-        }
-
-        #endregion
-
-        #region Animation Load / Unload
-
-        private async void BasePage_Loaded(object sender, RoutedEventArgs e)
-        {
-            await AnimateIn();
-        }
-
-        public async Task AnimateIn()
-        {
-            if (PageLoadAdnimation == PageAnimation.None)
-                return;
-
-            switch(PageLoadAdnimation)
-            {
-                case PageAnimation.SlideAndFadeInFromRgiht:
-
-                    await this.SlideAndFadeInFromRight(SlideSecounds);
-
-                    break;
-            }
-
-        }
-
-        public async Task AnimateOut()
-        {
-            if (PageUnloadAnimation == PageAnimation.None)
-                return;
-
-            switch (PageUnloadAnimation)
-            {
-
-                case PageAnimation.SlideAndFadeOutToLeft:
-
-                    await this.SlideAndFadeOutToLeft(SlideSecounds);
-
-                    break;
-            }
-
         }
 
         #endregion

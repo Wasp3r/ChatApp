@@ -7,7 +7,7 @@ namespace LearningChatApp
     /// <summary>
     /// Logika interakcji dla klasy LoginPage.xaml
     /// </summary>
-    public partial class RegisterPage : BasePage<LoginViewModel>
+    public partial class RegisterPage : BasePage<RegisterViewModel>
     {
         public RegisterPage()
         {

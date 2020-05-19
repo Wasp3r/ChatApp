@@ -42,18 +42,17 @@ namespace LearningChatApp.Core
             {
                 await Task.Delay(1000);
 
-                var email = Email;
+                IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.Chat);
 
-                var pass = (parameter as IHavePassword).SecurePassword.Unsecure();
+                //var email = Email;
+                //
+                //var pass = (parameter as IHavePassword).SecurePassword.Unsecure();
             });
         }
 
         public async Task Register()
         {
-            IoC.Get<ApplicationViewModel>().SideMenuVisible ^= true;
-            return;
-
-            IoC.Get<ApplicationViewModel>().CurrentPage = ApplicationPage.Register;
+            IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.Register);
 
             await Task.Delay(1);
         }
