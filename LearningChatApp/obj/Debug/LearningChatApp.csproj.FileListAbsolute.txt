@@ -1,5 +1,3 @@
-D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatListControl.g.cs
-D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatListItemControl.g.cs
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\SideMenuControl.g.cs
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\MainWindow.g.cs
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\App.g.cs
@@ -17,8 +15,6 @@ D:\Programowanie\C#\LearningChatApp\LearningChatApp\bin\Debug\Ninject.xml
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Pages\ChatPage.g.cs
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Pages\LoginPage.g.cs
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\App.baml
-D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatListControl.baml
-D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatListItemControl.baml
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\SideMenuControl.baml
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\MainWindow.baml
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Pages\ChatPage.baml
@@ -41,3 +37,11 @@ D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Pages\RegisterPage
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Pages\RegisterPage.baml
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\PageHost.g.cs
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\PageHost.baml
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatList\ChatListControl.g.cs
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatList\ChatListItemControl.g.cs
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatList\ChatListControl.baml
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatList\ChatListItemControl.baml
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatMessage\ChatMessageListItemControl.g.cs
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatMessage\ChatMessageListControl.g.cs
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatMessage\ChatMessageListItemControl.baml
+D:\Programowanie\C#\LearningChatApp\LearningChatApp\obj\Debug\Controls\Chat\ChatMessage\ChatMessageListControl.baml

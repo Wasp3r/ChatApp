@@ -7,10 +7,11 @@
       xmlns:core="clr-namespace:LearningChatApp.Core;assembly=LearningChatApp.Core"
       mc:Ignorable="d" 
       x:Name="Page"
+      Height="Auto"
       d:DesignHeight="700" d:DesignWidth="700"
       Title="Chat">
 
     <Border>
-        
+        <local:ChatMessageListControl/>
     </Border>
 </local:BasePage>

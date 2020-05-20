@@ -28,7 +28,7 @@
 
                         <StackPanel>
                             <TextBlock Text="Sign in"
-                                       FontSize="{StaticResource FontSizeLarge}"
+                                       FontSize="{StaticResource FontSizeXXLarge}"
                                        FontFamily="{StaticResource LatoRegular}"
                                        Foreground="{StaticResource WordBlueBrush}"/>
                             <TextBlock Text="It's about to get fun"
