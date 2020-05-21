@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:LearningChatApp"
              xmlns:core="clr-namespace:LearningChatApp.Core;assembly=LearningChatApp.Core"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid DataContext="{x:Static core:ChatListDesignModel.Instance}" Background="{StaticResource BackgroundLightBrush}">
+             d:DesignHeight="490" d:DesignWidth="800">
+    <Grid DataContext="{x:Static core:ChatMessageListDesignModel.Instance}" VerticalAlignment="Bottom">
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <ItemsControl ItemsSource="{Binding Items}">
                 <ItemsControl.ItemTemplate>

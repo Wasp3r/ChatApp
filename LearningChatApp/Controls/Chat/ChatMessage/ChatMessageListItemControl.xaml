@@ -6,21 +6,23 @@
              xmlns:local="clr-namespace:LearningChatApp"
              xmlns:core="clr-namespace:LearningChatApp.Core;assembly=LearningChatApp.Core"
              mc:Ignorable="d"
-             d:DesignWidth="300">
-    <Border Padding="5" Background="{StaticResource WordBlueBrush}">
+             Width="Auto"
+             d:DesignWidth="500">
+    <Border Padding="5" d:DataContext="{x:Static core:ChatMessageListItemDesignModel.Instance}">
         <Grid>
 
             <Border VerticalAlignment="Top"
                     HorizontalAlignment="Left"
                     Margin="0 7.5 0 7.5"
+                    Visibility="{Binding SendByMe, Converter={local:BooleanToVisibilityConverter}}"
                     CornerRadius="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                     Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
                     Width="35"
-                    Background="Green"
+                    Background="{Binding ProfilePictureRGB, Converter={local:StringRGBToBrushConverter}}"
                     BorderBrush="{StaticResource BackgroundLightBrush}"
                     BorderThickness="1">
 
-                <TextBlock Text="AO"
+                <TextBlock Text="{Binding Initials}"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
                            Foreground="{StaticResource BackgroundLightBrush}"
@@ -28,7 +30,7 @@
 
             </Border>
 
-            <Grid Margin="25 0 0 0" HorizontalAlignment="Left">
+            <Grid Margin="25 0 25 0" HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConcerter}}">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -36,14 +38,33 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="ExtraDetails" Storyboard.TargetProperty="Opacity">
+                                <DoubleAnimation To="1" Duration="00:00:00.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="ExtraDetails" Storyboard.TargetProperty="Opacity">
+                                <DoubleAnimation To="0" Duration="00:00:00.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+
                 <Border CornerRadius="10"
                         Padding="15"
-                        Background="{StaticResource ForegroundLightBrush}">
+                        Background="{StaticResource ForegroundLightBrush}"
+                        HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConcerter}}">
 
                     <TextBlock VerticalAlignment="Center"
                            TextWrapping="Wrap"
                            Foreground="{StaticResource WordDarkBlueBrush}"
-                           Text="Super ta apka. Wow, ale chmurki robi. Wow. Dej mi tego wincyj!"/>
+                           Text="{Binding Message}"/>
                 </Border>
 
                 <Path Grid.Row="1"
@@ -52,13 +73,26 @@
                       Margin="15 -1 15 0"
                       Data="M 0,0 L 10,10 L 20,0, 0,0"
                       StrokeThickness="0"
+                      HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConcerter}}"
                       Fill="{StaticResource ForegroundLightBrush}"/>
 
-                <TextBlock Grid.Row="2"
+                <StackPanel x:Name="ExtraDetails" Orientation="Horizontal" Grid.Row="2" Opacity="0">
+                    <TextBlock
                            HorizontalAlignment="Right"
                            Foreground="{StaticResource ForegroundLightBrush}"
                            FontSize="{StaticResource FontSizeSmall}"
-                           Text="12:30"/>
+                           FontFamily="{StaticResource LatoRegular}"
+                           Text="{Binding MessageSentTime, Converter={local:SentTimeToUserFriendlyConcerter}}"
+                           Margin="0 0 15 0"/>
+
+                    <TextBlock
+                           HorizontalAlignment="Right"
+                           Foreground="{StaticResource WordVeryDarkBlueBrush}"
+                           FontSize="{StaticResource FontSizeSmall}"
+                           FontFamily="{StaticResource LatoRegular}"
+                           Text="{Binding MessageReadTime, Converter={local:ReadTimeToDisplayConverter}}"
+                           Margin="0 0 15 0"/>
+                </StackPanel>
 
             </Grid>
             
