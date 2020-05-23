@@ -69,8 +69,9 @@
     <Compile Include="Animation\PageAnimations.cs" />
     <Compile Include="Animation\StoryboardHelpers.cs" />
     <Compile Include="AttachedProperties\BaseAttachedProperty.cs" />
+    <Compile Include="AttachedProperties\ButtonAttachedProperties.cs" />
+    <Compile Include="AttachedProperties\TextAttachedProperties.cs" />
     <Compile Include="AttachedProperties\NoFrameHistory.cs" />
-    <Compile Include="AttachedProperties\ButtonAttachedProperty.cs" />
     <Compile Include="AttachedProperties\FrameworkElementAnimationAttachedProerties.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
     <Compile Include="Controls\Chat\ChatList\ChatListControl.xaml.cs">
@@ -104,6 +105,7 @@
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
     <Compile Include="ValueConverters\ReadTimeToDisplayConverter.cs" />
+    <Compile Include="ValueConverters\SentByMeBackgroindConverter.cs" />
     <Compile Include="ValueConverters\SentTimeToUserFriendlyConverter.cs" />
     <Compile Include="ValueConverters\SentByMeToAligmentConverter.cs" />
     <Compile Include="ValueConverters\StringRGBToBrushConverter.cs" />

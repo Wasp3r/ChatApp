@@ -2,18 +2,19 @@
 using System.Windows;
 using System.Threading.Tasks;
 using LearningChatApp.Core;
+using System.ComponentModel;
 
 namespace LearningChatApp
 {
 
-    public class BasePage : Page
+    public class BasePage : UserControl
     {
         #region Public properties
         public PageAnimation PageLoadAdnimation { get; set; } = PageAnimation.SlideAndFadeInFromRgiht;
 
         public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideAndFadeOutToLeft;
 
-        public float SlideSecounds { get; set; } = 0.8f; 
+        public float SlideSecounds { get; set; } = 1f; 
 
         public bool ShouldAnimateOut { get; set; }
         #endregion
@@ -37,7 +38,7 @@ namespace LearningChatApp
             {
                 case PageAnimation.SlideAndFadeInFromRgiht:
 
-                    await this.SlideAndFadeInFromRight(SlideSecounds);
+                    await this.SlideAndFadeInFromRightAsync(SlideSecounds, width : (int)Application.Current.MainWindow.Width);
 
                     break;
             }
@@ -54,7 +55,7 @@ namespace LearningChatApp
 
                 case PageAnimation.SlideAndFadeOutToLeft:
 
-                    await this.SlideAndFadeOutToLeft(SlideSecounds);
+                    await this.SlideAndFadeOutToLeftAsync(SlideSecounds, width: (int)Application.Current.MainWindow.Width);
 
                     break;
             }
@@ -65,6 +66,9 @@ namespace LearningChatApp
 
         public BasePage()
         {
+            if (DesignerProperties.GetIsInDesignMode(this))
+                return;
+
             if (PageLoadAdnimation != PageAnimation.None)
                 Visibility = Visibility.Collapsed;
 

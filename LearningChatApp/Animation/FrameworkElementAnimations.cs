@@ -10,11 +10,11 @@ namespace LearningChatApp
 {
     public static class FrameworkElementAnimations
     {
-        public static async Task SlideAndFadeInFromRightAsync(this FrameworkElement element, float secounds = 0.3f, bool keepMargin = true)
+        public static async Task SlideAndFadeInFromRightAsync(this FrameworkElement element, float secounds = 0.3f, bool keepMargin = true, int width =0)
         {
             var sb = new Storyboard();
 
-            sb.AddSlideFromRight(secounds, element.ActualWidth, keepMargin: keepMargin);
+            sb.AddSlideFromRight(secounds, width == 0 ? element.ActualWidth : width, keepMargin: keepMargin);
             sb.AddFadeIn(secounds);
             sb.Begin(element);
 
@@ -23,11 +23,11 @@ namespace LearningChatApp
             await Task.Delay((int)(secounds * 1000));
         }
 
-        public static async Task SlideAndFadeInFromLeftAsync(this FrameworkElement element, float secounds = 0.3f, bool keepMargin = true)
+        public static async Task SlideAndFadeInFromLeftAsync(this FrameworkElement element, float secounds = 0.3f, bool keepMargin = true, int width = 0)
         {
             var sb = new Storyboard();
 
-            sb.AddSlideFromLeft(secounds, element.ActualWidth, keepMargin: keepMargin);
+            sb.AddSlideFromLeft(secounds, width == 0 ? element.ActualWidth : width, keepMargin: keepMargin);
             sb.AddFadeIn(secounds);
             sb.Begin(element);
 
@@ -36,11 +36,11 @@ namespace LearningChatApp
             await Task.Delay((int)(secounds * 1000));
         }
 
-        public static async Task SlideAndFadeOutToLeftAsync(this FrameworkElement element, float secounds = 0.3f, bool keepMargin = true)
+        public static async Task SlideAndFadeOutToLeftAsync(this FrameworkElement element, float secounds = 0.3f, bool keepMargin = true, int width = 0)
         {
             var sb = new Storyboard();
 
-            sb.AddSlideToLeft(secounds, element.ActualWidth, keepMargin: keepMargin);
+            sb.AddSlideToLeft(secounds, width == 0 ? element.ActualWidth : width, keepMargin: keepMargin);
             sb.AddFadeIn(secounds);
             sb.Begin(element);
 
@@ -49,11 +49,11 @@ namespace LearningChatApp
             await Task.Delay((int)(secounds * 1000));
         }
 
-        public static async Task SlideAndFadeOutToRightAsync(this FrameworkElement element, float secounds = 0.3f, bool keepMargin = true)
+        public static async Task SlideAndFadeOutToRightAsync(this FrameworkElement element, float secounds = 0.3f, bool keepMargin = true, int width = 0)
         {
             var sb = new Storyboard();
 
-            sb.AddSlideToRight(secounds, element.ActualWidth, keepMargin: keepMargin);
+            sb.AddSlideToRight(secounds, width == 0 ? element.ActualWidth : width, keepMargin: keepMargin);
             sb.AddFadeIn(secounds);
             sb.Begin(element);
 

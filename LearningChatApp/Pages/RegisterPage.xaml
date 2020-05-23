@@ -8,8 +8,7 @@
       xmlns:core="clr-namespace:LearningChatApp.Core;assembly=LearningChatApp.Core"
       mc:Ignorable="d"
       x:Name="Page"
-      d:DesignHeight="700" d:DesignWidth="700"
-      Title="Register">
+      d:DesignHeight="700" d:DesignWidth="700">
 
     <Border>
         <Grid>
@@ -36,15 +35,19 @@
                                        FontFamily="{StaticResource LatoRegular}"
                                        Foreground="{StaticResource ForegroundDarkBrush}"/>
 
-                            <TextBox Tag="Email" Text="{Binding Email}"/>
+                            <TextBox 
+                                Tag="Email" 
+                                Text="{Binding Email}"
+                                local:IsFocusProperty.Value="True"/>
 
-                            <PasswordBox x:Name="PasswordText" Tag="Password" Margin="0 0 0 30"/>
+                            <PasswordBox x:Name="PasswordText" Tag="Password" Margin="0 0 0 30" />
 
                             <Button Content="Register" 
                                     Command="{Binding RegisterCommand}"
                                     CommandParameter="{Binding ElementName=Page}" 
-                                    local:IsBusyProperty.Value="{Binding LoginIsRunning}"
-                                    HorizontalAlignment="Center" />
+                                    local:IsBusyProperty.Value="{Binding RegisterIsRunning}"
+                                    HorizontalAlignment="Center"
+                                    IsDefault="True"/>
 
                         </StackPanel>
 

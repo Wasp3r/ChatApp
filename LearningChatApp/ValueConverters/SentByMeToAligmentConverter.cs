@@ -4,16 +4,14 @@ using System.Windows;
 
 namespace LearningChatApp
 {
-    public class SentByMeToAligmentConcerter : BaseValueConverter<SentByMeToAligmentConcerter>
+    public class SentByMeToAligmentConverter : BaseValueConverter<SentByMeToAligmentConverter>
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var sentByMe = (bool)value;
-
-            if (sentByMe)
-                return HorizontalAlignment.Right;
+            if (parameter != null)
+                return (bool)value ? HorizontalAlignment.Right : HorizontalAlignment.Left;
             else
-                return HorizontalAlignment.Left;
+                return (bool)value ? HorizontalAlignment.Left : HorizontalAlignment.Right;
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

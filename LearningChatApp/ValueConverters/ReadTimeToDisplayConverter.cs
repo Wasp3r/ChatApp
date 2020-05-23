@@ -14,9 +14,9 @@ namespace LearningChatApp
                 return "";
 
             if (DateTimeOffset.UtcNow.Date == sentDate.Date)
-                return $"read {sentDate.ToString("HH:mm")}";
+                return $"Read {sentDate.ToString("HH:mm")}";
 
-            return $"read {sentDate.ToString("HH:mm dd MMM yyyy")}";
+            return $"Read {sentDate.ToString("HH:mm dd MMM yyyy")}";
 
         }
 

@@ -30,7 +30,7 @@
 
             </Border>
 
-            <Grid Margin="25 0 25 0" HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConcerter}}">
+            <Grid Margin="25 0 25 0" HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConverter}, ConverterParameter=True}">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -58,8 +58,7 @@
 
                 <Border CornerRadius="10"
                         Padding="15"
-                        Background="{StaticResource ForegroundLightBrush}"
-                        HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConcerter}}">
+                        Background="{Binding SendByMe, Converter={local:SentByMeBackgroindConverter}}">
 
                     <TextBlock VerticalAlignment="Center"
                            TextWrapping="Wrap"
@@ -73,25 +72,28 @@
                       Margin="15 -1 15 0"
                       Data="M 0,0 L 10,10 L 20,0, 0,0"
                       StrokeThickness="0"
-                      HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConcerter}}"
-                      Fill="{StaticResource ForegroundLightBrush}"/>
+                      HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConverter}}"
+                      Fill="{Binding SendByMe, Converter={local:SentByMeBackgroindConverter}}"/>
 
-                <StackPanel x:Name="ExtraDetails" Orientation="Horizontal" Grid.Row="2" Opacity="0">
+                <StackPanel x:Name="ExtraDetails" 
+                            Grid.Row="2" 
+                            Opacity="0" 
+                            HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConverter}, ConverterParameter=False}"
+                            Orientation="Horizontal" 
+                            >
                     <TextBlock
-                           HorizontalAlignment="Right"
                            Foreground="{StaticResource ForegroundLightBrush}"
                            FontSize="{StaticResource FontSizeSmall}"
-                           FontFamily="{StaticResource LatoRegular}"
+                           FontFamily="{StaticResource LatoBold}"
                            Text="{Binding MessageSentTime, Converter={local:SentTimeToUserFriendlyConcerter}}"
-                           Margin="0 0 15 0"/>
+                           Margin="0 -5 0 0"/>
 
                     <TextBlock
-                           HorizontalAlignment="Right"
                            Foreground="{StaticResource WordVeryDarkBlueBrush}"
                            FontSize="{StaticResource FontSizeSmall}"
-                           FontFamily="{StaticResource LatoRegular}"
+                           FontFamily="{StaticResource LatoBold}"
                            Text="{Binding MessageReadTime, Converter={local:ReadTimeToDisplayConverter}}"
-                           Margin="0 0 15 0"/>
+                           Margin="15 -5 5 0"/>
                 </StackPanel>
 
             </Grid>

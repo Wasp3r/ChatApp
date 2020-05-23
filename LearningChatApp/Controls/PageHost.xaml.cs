@@ -1,5 +1,7 @@
-﻿using System;
+﻿using LearningChatApp.Core;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +40,10 @@ namespace LearningChatApp
         public PageHost()
         {
             InitializeComponent();
+
+            if (DesignerProperties.GetIsInDesignMode(this))
+                NewPage.Content = (BasePage)new ApplicationPageValueConverter().Convert(IoC.Get<ApplicationViewModel>().CurrentPage);
+
         }
         #endregion
 
@@ -55,7 +61,15 @@ namespace LearningChatApp
             oldPageFrame.Content = oldPageConetent;
 
             if (oldPageConetent is BasePage oldPage)
+            {
                 oldPage.ShouldAnimateOut = true;
+
+                Task.Delay(((int)oldPage.SlideSecounds * 1000)).ContinueWith((t) =>
+                {
+                    Application.Current.Dispatcher.Invoke(() => oldPageFrame.Content = null);
+                });
+            }
+                
 
             newPageFrame.Content = e.NewValue;
         }
