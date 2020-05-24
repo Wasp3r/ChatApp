@@ -63,6 +63,7 @@
                     <TextBlock VerticalAlignment="Center"
                            TextWrapping="Wrap"
                            Foreground="{StaticResource WordDarkBlueBrush}"
+                           FontSize="{StaticResource FontSizeLarge}"
                            Text="{Binding Message}"/>
                 </Border>
 
