@@ -30,7 +30,7 @@
 
             </Border>
 
-            <Grid Margin="25 0 25 0" HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConverter}, ConverterParameter=True}">
+            <Grid Margin="25 0 25 0" HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConverter}}">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -78,7 +78,7 @@
                 <StackPanel x:Name="ExtraDetails" 
                             Grid.Row="2" 
                             Opacity="0" 
-                            HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConverter}, ConverterParameter=False}"
+                            HorizontalAlignment="{Binding SendByMe, Converter={local:SentByMeToAligmentConverter}, ConverterParameter=True}"
                             Orientation="Horizontal" 
                             >
                     <TextBlock

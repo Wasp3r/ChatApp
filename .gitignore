@@ -1,11 +1,4 @@
 /.vs/LearningChatApp/DesignTimeBuild/.dtbcache.v2
 /.vs/LearningChatApp/v16/.suo
-/LearningChatApp.Core/bin/Debug/netstandard2.0/LearningChatApp.Core.dll
-/LearningChatApp.Core/bin/Debug/netstandard2.0/LearningChatApp.Core.pdb
-/LearningChatApp.Core/obj/Debug/netstandard2.0/LearningChatApp.Core.csproj.CoreCompileInputs.cache
-/LearningChatApp.Core/obj/Debug/netstandard2.0/LearningChatApp.Core.csprojAssemblyReference.cache
-/LearningChatApp.Core/obj/Debug/netstandard2.0/LearningChatApp.Core.dll
-/LearningChatApp.Core/obj/Debug/netstandard2.0/LearningChatApp.Core.pdb
-/LearningChatApp/bin/Debug/LearningChatApp.Core.dll
-/LearningChatApp/bin/Debug/LearningChatApp.Core.pdb
-/LearningChatApp/bin/Debug/LearningChatApp.pdb
+/LearningChatApp.Core/bin/Debug/
+/LearningChatApp/bin/Debug/
