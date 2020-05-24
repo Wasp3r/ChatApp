@@ -1,4 +1,6 @@
 /.vs/LearningChatApp/DesignTimeBuild/.dtbcache.v2
 /.vs/LearningChatApp/v16/.suo
 /LearningChatApp.Core/bin/
+/LearningChatApp.Core/obj/
 /LearningChatApp/bin/
+/LearningChatApp/obj/
