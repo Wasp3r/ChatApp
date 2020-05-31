@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Programowanie\C#\LearningChatApp\LearningChatApp\App.xaml
-161587114202
+17346809153
 
-36-755146643
+38-328206960
 171484796986
-Controls\Chat\ChatList\ChatListControl.xaml;Controls\Chat\ChatList\ChatListItemControl.xaml;Controls\Chat\ChatMessage\ChatMessageListItemControl.xaml;Controls\Chat\ChatMessage\ChatMessageListControl.xaml;Controls\PageHost.xaml;Controls\SideMenuControl.xaml;MainWindow.xaml;Pages\ChatPage.xaml;Pages\RegisterPage.xaml;Pages\LoginPage.xaml;Styles\Scroll.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;
+Controls\BubbleContent.xaml;Controls\Chat\ChatList\ChatListControl.xaml;Controls\Chat\ChatList\ChatListItemControl.xaml;Controls\Chat\ChatMessage\ChatMessageListItemControl.xaml;Controls\Chat\ChatMessage\ChatMessageListControl.xaml;Controls\PageHost.xaml;Controls\SideMenuControl.xaml;MainWindow.xaml;Pages\ChatPage.xaml;Pages\RegisterPage.xaml;Pages\LoginPage.xaml;Styles\Scroll.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;
 
 False
 

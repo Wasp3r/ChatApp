@@ -2,7 +2,7 @@
 
 namespace LearningChatApp.Core
 {
-    public class ChatListViewModel
+    public class ChatListViewModel : BaseViewModel
     {
         public List<ChatListItemViewModel> Items { get; set; }
     }
